@@ -6,8 +6,8 @@ function App() {
   const [conversation, setConversation] = useState([]); 
   const [loading, setLoading] = useState(false);
 
-  const hfToken = process.env.REACT_APP_HF_TOKEN;
-  const ULR = process.env.URL;
+  const hfToken = import.meta.env.VITE_HF_TOKEN;
+const URL = import.meta.env.VITE_URL;
   const askQuestion = async () => {
     if (!question.trim()) return;
 
